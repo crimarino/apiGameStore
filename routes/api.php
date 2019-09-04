@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('game', 'Game\GameController@game');
 Route::get('game/{id}', 'Game\GameController@gameById');
+Route::post('game', 'Game\GameController@gameSave');
+Route::put('game/{game}', 'Game\GameController@gameUpdate');
+Route::delete('game/{game}', 'Game\GameController@gameDelete');

@@ -7,14 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class GameModel extends Model
 {
     protected $table = "games";
+    public $timestamps = false;
 
     protected $fillable = [
-        'id',
-        'user_id',
         'name',
+        'user_id',
         'plataform',
-        'description',
-        'created_at',
-        'updated_at'
+        'description'
     ];
 }
