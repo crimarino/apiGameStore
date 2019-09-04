@@ -17,8 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('game', 'Game\GameController@game');
+/* Route::get('game', 'Game\GameController@game');
 Route::get('game/{id}', 'Game\GameController@gameById');
 Route::post('game', 'Game\GameController@gameSave');
 Route::put('game/{id}', 'Game\GameController@gameUpdate');
-Route::delete('game/{game}', 'Game\GameController@gameDelete');
+Route::delete('game/{game}', 'Game\GameController@gameDelete'); */
+
+Route::apiResource('game', 'Game\Game');

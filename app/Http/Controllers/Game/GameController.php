@@ -10,19 +10,19 @@ use Validator;
 
 class GameController extends Controller
 {
-    public function game(){
+    /* public function game(){
         return response()->json(GameModel::get(),200);
-    }
+    } */
 
-    public function gameById($id){
+    /* public function gameById($id){
         $game = GameModel::find($id);
         if(is_null($game)){
             return response()->json(["message"=>'Record not found'],404);
         }
         return response()->json($game,200);
-    }
+    } */
 
-    public function gameSave(Request $request){
+    /* public function gameSave(Request $request){
         $rules = [
             'name' => 'required|min:3',
             'plataform' => 'required|min:2'
@@ -35,23 +35,23 @@ class GameController extends Controller
 
         $game = GameModel::create($request->all());
         return response()->json($game,201);
-    }
+    } */
 
-    public function gameUpdate(Request $request, $id){
+    /* public function gameUpdate(Request $request, $id){
         $game = GameModel::find($id);
         if(is_null($game)){
             return response()->json(["message"=>'Record not found'],404);
         }
         $game->update($request->all());
         return response()->json($game,200);
-    }
+    } */
 
-    public function gameDelete(Request $request, $id){
+    /* public function gameDelete(Request $request, $id){
         $game = GameModel::find($id);
         if(is_null($game)){
             return response()->json(["message"=>'Record not found'],404);
         }
         $game->delete();
         return response()->json(null,204);
-    }
+    } */
 }
