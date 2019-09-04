@@ -12,4 +12,8 @@ class GameController extends Controller
     public function game(){
         return response()->json(GameModel::get(),200);
     }
+
+    public function gameById($id){
+        return response()->json(GameModel::find($id),200);
+    }
 }
