@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\UserModel;
 use Validator;
 
+
 class User extends Controller
 {
     /**

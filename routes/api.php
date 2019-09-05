@@ -25,3 +25,4 @@ Route::delete('game/{game}', 'Game\GameController@gameDelete'); */
 
 Route::apiResource('user', 'User\User');
 Route::apiResource('game', 'Game\Game');
+Route::post('validation', 'Validation\Validation@storeProcedure');
