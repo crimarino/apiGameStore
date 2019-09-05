@@ -23,4 +23,5 @@ Route::post('game', 'Game\GameController@gameSave');
 Route::put('game/{id}', 'Game\GameController@gameUpdate');
 Route::delete('game/{game}', 'Game\GameController@gameDelete'); */
 
+Route::apiResource('user', 'User\User');
 Route::apiResource('game', 'Game\Game');
