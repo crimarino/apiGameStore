@@ -4,22 +4,28 @@ namespace App\Http\Controllers\Validation;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\GameModel;
+use App\Models\ValidationModel;
+use DB;
 
 class Validation extends Controller
 {
     public function storeProcedure(Request $request)
     {
-        $email = $request->email;
+        /* $email = $request->email;
         $password = $request->password;
 
-        $user = GameModel::select('call traerUsuario(?,?)', [$email, $password]);
+        $user = GameModel::select('call traerUsuario(?,?)', [$email, $password]); */
 
-        /* $user = GameModel::select('call traerUsuario(?,?)', 
+        $user =DB::select('call traerUsuario(?, ?)',
             [
-                'emailPas' =>$request->email,
-                'passwordPas' =>$request->password
-            ]); */
-        return response()->json($user); 
+                $request->email,
+                $request->password
+            ]);
+            
+        /* $user = ValidationModel::select('call traerUsuario("crimarino@uniboyaca.edu.co", "123456789")'); */
+        return response()->json($user);
+
+        /* return response()->json(ValidationModel::select("call traerUsuario(crimarino@uniboyaca.edu.co","123456789"),200); */
+
     }
 }
