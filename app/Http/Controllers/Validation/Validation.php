@@ -16,7 +16,7 @@ class Validation extends Controller
 
         $user = GameModel::select('call traerUsuario(?,?)', [$email, $password]); */
 
-        $user =DB::select('call traerUsuario(?, ?)',
+        $user = DB::select('call traerUsuario(?, ?)',
             [
                 $request->email,
                 $request->password
