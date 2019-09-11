@@ -6,20 +6,34 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+
+import {InputTextModule} from 'primeng/inputtext';
+import {PasswordModule} from 'primeng/password';
+
+import {GamesService} from './services/games.service';
+import {UsersService} from './services/users.service';
+import { GameListComponent } from './components/game-list/game-list.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    GameListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputTextModule,
+    PasswordModule
   ],
   providers: [
+    GamesService,
+    UsersService
   ],
   bootstrap: [AppComponent]
 })
