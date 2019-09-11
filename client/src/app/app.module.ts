@@ -7,9 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import {GamesService } from './services/games.service';
-import { UsersService } from './services/users.service';
-
 
 @NgModule({
   declarations: [
@@ -23,8 +20,6 @@ import { UsersService } from './services/users.service';
     ReactiveFormsModule
   ],
   providers: [
-    GamesService,
-    UsersService
   ],
   bootstrap: [AppComponent]
 })
