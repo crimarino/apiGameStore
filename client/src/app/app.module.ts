@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 
 import {InputTextModule} from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
+import {ButtonModule} from 'primeng/button';
 
 import {GamesService} from './services/games.service';
 import {UsersService} from './services/users.service';
@@ -29,7 +30,8 @@ import { GameListComponent } from './components/game-list/game-list.component';
     FormsModule,
     ReactiveFormsModule,
     InputTextModule,
-    PasswordModule
+    PasswordModule,
+    ButtonModule
   ],
   providers: [
     GamesService,

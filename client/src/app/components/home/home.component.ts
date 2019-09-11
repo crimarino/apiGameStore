@@ -19,12 +19,12 @@ export class HomeComponent implements OnInit {
     password: ''
   };
 
-  constructor(/* private userService: UsersService, private router: Router, private activatedRoute: ActivatedRoute */) { }
+  constructor(private userService: UsersService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
-/*    getInfoUser() {
+    getInfoUser() {
     const params = this.user.email;
     if (params) {
       this.userService.getUser(params)
@@ -36,5 +36,5 @@ export class HomeComponent implements OnInit {
           err => console.log(err)
         )
     }
-  } */
+  }
 }
